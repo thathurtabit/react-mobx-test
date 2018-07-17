@@ -1,0 +1,57 @@
+{
+  "name": "react-app-skeleton",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-ga": "^2.5.3",
+    "react-scripts": "1.1.1",
+    "react-test-renderer": "^16.2.0",
+    "source-map-explorer": "^1.5.0",
+    "styled-components": "^3.2.3",
+    "webfontloader": "^1.6.28"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "test:ci": "react-scripts test --env=jsdom --testResultsProcessor ./node_modules/jest-junit --coverage --coverageDirectory=_reports/coverage"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-links": "^3.3.15",
+    "@storybook/addons": "^3.3.15",
+    "@storybook/react": "^3.3.15",
+    "babel-core": "^6.26.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest-enzyme": "^6.0.0",
+    "jest-junit": "^3.6.0",
+    "prop-types": "^15.6.1"
+  },
+  "jest": {
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ]
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "output": "_reports/junit.xml",
+    "classNameTemplate": "{classname} - {title}",
+    "titleTemplate": "{classname} - {title}",
+    "ancestorSeparator": " > ",
+    "usePathForSuiteName": "true"
+  }
+}
