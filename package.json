@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
     "react": "^16.4.1",
+    "react-app-rewire-mobx": "^1.0.8",
     "react-dom": "^16.4.1",
     "react-ga": "^2.5.3",
     "react-scripts": "1.1.1",
@@ -13,11 +16,11 @@
     "webfontloader": "^1.6.28"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject",
     "analyze": "source-map-explorer build/static/js/main.*",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "test:ci": "react-scripts test --env=jsdom --testResultsProcessor ./node_modules/jest-junit --coverage --coverageDirectory=_reports/coverage"
@@ -28,6 +31,7 @@
     "@storybook/addons": "^3.3.15",
     "@storybook/react": "^3.3.15",
     "babel-core": "^6.26.0",
+    "babel-plugin-styled-components": "^1.5.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.0",
@@ -38,7 +42,8 @@
     "eslint-plugin-react": "^7.7.0",
     "jest-enzyme": "^6.0.0",
     "jest-junit": "^3.6.0",
-    "prop-types": "^15.6.1"
+    "prop-types": "^15.6.1",
+    "react-app-rewired": "^1.5.2"
   },
   "jest": {
     "coverageReporters": [

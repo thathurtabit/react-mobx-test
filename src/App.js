@@ -53,6 +53,7 @@ const App = () => (
           <li>WebFontLoader</li>
           <li>GA</li>
           <li>CRA service woker</li>
+          <li>source-map-explorer</li>
           <li>Airbnb eslint</li>
           <li>Jenkins build scripts</li>
         </ul>
